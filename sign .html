@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="stlye.css">
+        <body>
+            <div class="backplate">
+                <div class="center">
+                    <h1 class="head-color">Sign Up</h1>
+                        <form name="form1" method="post" action="sign.php" OnSubmit="return fncSubmit();">
+                            <p>
+                            <label>
+                                <input name="username" class="box text-wid" aria-required="true" type="text" placeholder="Username" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="txtPassword" type="password" id="txtPassword" class="box text-wid" aria-required="true" placeholder="Password" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="txtConPassword" type="password" id="txtConPassword" class="box text-wid" aria-required="true" placeholder="Confirm Password" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="fName" class="box text-wid" aria-required="true" type="text" placeholder="ชื่อ (Name)" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="lName" class="box text-wid" aria-required="true" type="text" placeholder=" สกุล(Last Name)" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="email" class="box text-wid" aria-required="true" type="email" placeholder="E-mail" required>
+                            </label>
+                            </p>
+                            <p>
+                            <label>
+                                <input name="phoneNum" class="box text-wid" aria-required="true" type="text" placeholder="Phone Number" required>
+                            </label>
+                            </p>
+                            
+                            <button type="submit" name="Submit" value="Save">Sign Up</button>
+                        </form>
+                        <script language="javascript">
+                            function fncSubmit()
+                            {
+                    
+                                if(document.form1.txtPassword.value == "")
+                                {
+                                    alert('กรุณากรอก Password');
+                                    document.form1.txtPassword.focus();		
+                                    return false;
+                                }	
+                    
+                                if(document.form1.txtConPassword.value == "")
+                                {
+                                    alert('กรุณากรอก Confirm Password');
+                                    document.form1.txtConPassword.focus();		
+                                    return false;
+                                }	
+                    
+                                if(document.form1.txtPassword.value != document.form1.txtConPassword.value)
+                                {
+                                    alert('Confirm Password ไม่ตรงกัน');
+                                    document.form1.txtConPassword.focus();		
+                                    return false;
+                                }	
+                    
+                    
+                    
+                                document.form1.submit();
+                            }
+                        </script>
+                 
+                </div>
+            </div>
+        </body>
+</html>
